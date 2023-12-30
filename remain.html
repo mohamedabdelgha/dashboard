@@ -20,7 +20,7 @@
             <h1>النقلات المتبقية</h1>
         </div>
         <div class="table">
-            <input type="text" placeholder="ابحث عن نقلة باستخدام اسم العميل">
+            <input id="searchbar" type="text" placeholder="ابحث عن نقلة باستخدام اسم العميل">
             <table>
                 <thead>
                     <tr>
@@ -36,7 +36,7 @@
                         <th></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tablebody">
                     <tr>
                         <td>1</td>
                         <td>محمد احمد</td>
@@ -46,12 +46,19 @@
                         <td>50</td>
                         <td>30</td>
                         <td>20</td>
-                        <td><button class="type">ترحيل</button></td>
+                        <td><button class="type" id="sellbtn">ترحيل</button></td>
                         <td><button class="type">تفاصيل</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+    <script src="js/search.js"></script>
+    <script>
+        let sellbtn  = document.getElementById('sellbtn')
+        sellbtn.onclick=()=>{
+            window.location.href='sellcar.html'
+        }
+    </script>
 </body>
 </html>
