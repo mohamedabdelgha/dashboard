@@ -170,7 +170,7 @@ header img{width: 60px;}
     flex-direction: column;
     direction: rtl;
 }
-.window i{
+.window .close{
     position: absolute;
     top: 20px;
     left: 20px;
@@ -181,7 +181,7 @@ header img{width: 60px;}
     border-radius: 50%;
     transition: 0.5s ease;
 }
-.window i:hover{
+.window .close:hover{
     color: #c10000;
 }
 .window h2{
@@ -332,33 +332,34 @@ header img{width: 60px;}
     background-color:rgb(72, 72, 255) ;
 }
 /* صفحة النقلات المتبقية والنقلات المنتهية */
-.todayscar.table table{
+.todayscar.table table ,.window table,.bigcon table{
     width: 90%;
     text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
 }
-.todayscar .table table thead{
+.todayscar .table table thead,.window table thead,.bigcon table thead{
     background: linear-gradient(270deg,#5A8030,#74C785);
 }
-.todayscar .table table th{
+.todayscar .table table th,.window table th{
     font-size: 20px;
     color: #fff;
     padding: 5px;
     border-bottom: 1px solid #625D5D;
 }
-.table table td{
+.table table td,.window table td{
     font-size: 20px;
     border-bottom: 1px solid #625D5D;
     padding: 10px;
     color: #625D5D;
 }
-.table table td .btn{
+.table table td .btn,.window table td .btn{
     border: none;
     background-color: transparent;
     font-size: 20px;
     cursor: pointer;
 }
-.table table td .type{
-    background-color:#00C2F4;
+.table table td .type,.sellingbtn{
     border: none;
     padding: 10px;
     font-size: 20px;
@@ -366,6 +367,7 @@ header img{width: 60px;}
     border-radius: 5px;
     cursor: pointer;
     transition: 0.5s ease-in;
+    background-color:#00C2F4;
 }
 .table table td .type:hover{
     background-color:rgb(72, 72, 255) ;
@@ -444,6 +446,97 @@ header img{width: 60px;}
     transform: scale(1.1);
     opacity: 0.8;
 }
+.cardetails{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #00C2F4;
+    border: none;
+    border-radius:10px;
+    padding: 5px 15px;
+    color: #dedede;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+.cardetails:hover{
+    background-color:rgb(72, 72, 255) ;
+}
+.bigcon{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    direction: rtl;
+    overflow-x: hidden;
+}
+.bigcon .right{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.bigcon .right button{
+    color: #dedede;
+    background-color: #00C2F4;
+    font-size: 25px;
+    width: 50%;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.bigcon .right button:hover{
+    background-color:rgb(72, 72, 255) ;
+}
+.bigcon .right .deletaadd{
+    background-color: #c10000;
+    width: 80%;
+}
+.bigcon .right .deletaadd:hover,.bigcon .left .deletetable:hover{
+    background-color: #760505;
+}
+.bigcon .left .deletetable{
+    background-color: #c10000;
+    width: 60%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 25px;
+    color: #dedede;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.bigcon .right ul{
+    width: 80%;
+    text-align: start;
+    list-style: none;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.bigcon .right ul .head{
+    background:linear-gradient(270deg,#5A8030,#74C785);
+    color: #fff;
+}
+.bigcon .right ul li{
+    padding: 10px ;
+    font-size: 20px;
+    color: #040404;
+    font-weight: 600;
+    border-bottom: 1px solid #625D5D;
+}
+.bigcon .left{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
 /* responsive customization */
 @media (max-width:800px) {
     header img{width: 30px;}
@@ -488,8 +581,9 @@ header img{width: 60px;}
         width: 30%;
         font-size: 15px;
     }
-    .title h1{font-size:20px;}
+    .title h1{font-size: 20px;}
     .table{width: 95%;}
+    .window table{width: 100%;transform: scale(0.6);}
     .todayscar .table table{width: 100%;transform: scale(0.4);}
     .table table{width: 100%;transform: scale(0.7);}
     .table input{
@@ -537,4 +631,6 @@ header img{width: 60px;}
     .sellcon{flex-direction: column;}
     .sellcon input[type=number],.sellcon input[type=text],.sellcon select{width: 50%;}
     .detailscon{width: 95%;}
+    .bigcon{flex-direction: column;}
+    .bigcon .right,.bigcon .left{width: 100%;}
 }

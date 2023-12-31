@@ -47,7 +47,7 @@
                         <td>30</td>
                         <td>20</td>
                         <td><button class="type" id="sellbtn">ترحيل</button></td>
-                        <td><button class="type">تفاصيل</button></td>
+                        <td><button id="details" class="type">تفاصيل</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -58,6 +58,10 @@
         let sellbtn  = document.getElementById('sellbtn')
         sellbtn.onclick=()=>{
             window.location.href='sellcar.html'
+        }
+        let detailsbtn = document.getElementById('details')
+        detailsbtn.onclick=()=>{
+            window.location.href='cardetails.html'
         }
     </script>
 </body>

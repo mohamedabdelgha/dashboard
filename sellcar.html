@@ -15,9 +15,10 @@
         </div>
         <a href="home.html"><i class="fa-solid fa-arrow-left"></i></a>
     </header>
+    <button id="details" class="cardetails">تفاصيل النقلة</button>
         <!-- اضافة اصناف للنقلة -->
     <div class="window" id="kinds">
-        <i id="closekinds" class="fa-solid fa-xmark"></i>
+        <i id="closekinds" class="fa-solid fa-xmark close"></i>
         <h2>اضافة اصناف للنقلة</h2>
         <div class="inputs">
             <input type="text" name="" id="" placeholder="اسم الصنف">
@@ -26,12 +27,37 @@
                 <option value="">العدة</option>
             </select>
             <input type="number" name="" id="" placeholder="سعر البيع">
-            <button>اضافة</button>
+            <button id="addcon">اضافة</button>
+            <button id="editcon">تعديل</button>
         </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>الصنف</th>
+                    <th>العدد</th>
+                    <th>العدة</th>
+                    <th>السعر</th>
+                    <th>التاريخ</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+                <tr>
+                    <td>تفاح</td>
+                    <td>10</td>
+                    <td>صناديق</td>
+                    <td>15</td>
+                    <td></td>
+                    <td><button id="editkind" class="btn" style="color: #00F000;"><i class="fa-regular fa-pen-to-square"></i></button></td>
+                    <td><button id="deletecar" class="btn"  style="color: #FF0000;" ><i class="fa-solid fa-trash"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <!-- تعديل بيانات النقلة -->
     <div class="window" id="editcarcon">
-        <i id="closeeditcon" class="fa-solid fa-xmark"></i>
+        <i id="closeeditcon" class="fa-solid fa-xmark close"></i>
         <h2>تعديل النقلة</h2>
         <div class="inputs">
             <input type="text" name="" id="" placeholder="اسم النفلة">
@@ -44,14 +70,16 @@
     </div>
     <!-- تعديل عملية البيع -->
     <div class="window" id="editcarsell">
-        <i id="closesellcon" class="fa-solid fa-xmark"></i>
+        <i id="closesellcon" class="fa-solid fa-xmark close"></i>
         <h2>تعديل عملية البيع</h2>
         <div class="inputs">
             <input type="number" placeholder="العدد">
             <input type="number" placeholder="الوزن">
             <input type="number" placeholder="السعر">
             <input type="text" placeholder="اسم البائع">
-            <input type="text" placeholder="الصنف">
+            <select name="kind" id="">
+                <option value="تفاح">تفاح</option>
+            </select>
             <select name="" id="">
                 <option value="">صناديق صغيرة</option>
                 <option value="">صناديق كبيرة</option>
@@ -76,7 +104,9 @@
             <option value="">صناديق صغيرة</option>
             <option value="">صناديق كبيرة</option>
         </select>
-        <input type="text" placeholder="الصنف">
+        <select name="kind" id="">
+            <option value="تفاح">تفاح</option>
+        </select>
         <button>تم</button>
     </div>
     <div class="todayscar">
@@ -147,6 +177,22 @@
         }
         closesellcon.onclick=()=>{
             editcarsell.style.display='none'
+        }
+        let addcon = document.getElementById('addcon')
+        let editcon = document.getElementById('editcon')
+        let editkind = document.getElementById('editkind')
+        editcon.style.display='none'
+        editkind.onclick=()=>{
+            addcon.style.display='none'
+            editcon.style.display='block'
+        }
+        editcon.onclick=()=>{
+            editcon.style.display='none'
+            addcon.style.display='block'
+        }
+        let detailsbtn = document.getElementById('details')
+        detailsbtn.onclick=()=>{
+            window.location.href='cardetails.html'
         }
     </script>
     <script src="js/buttons.js"></script>

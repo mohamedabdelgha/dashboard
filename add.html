@@ -17,7 +17,7 @@
     </header>
     <!-- اضافة اصناف للنقلة -->
     <div class="window" id="kinds">
-        <i id="closekinds" class="fa-solid fa-xmark"></i>
+        <i id="closekinds" class="fa-solid fa-xmark close"></i>
         <h2>اضافة اصناف للنقلة</h2>
         <div class="inputs">
             <input type="text" name="" id="" placeholder="اسم الصنف">
@@ -26,12 +26,37 @@
                 <option value="">العدة</option>
             </select>
             <input type="number" name="" id="" placeholder="سعر البيع">
-            <button>اضافة</button>
+            <button id="addcon">اضافة</button>
+            <button id="editcon">تعديل</button>
         </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>الصنف</th>
+                    <th>العدد</th>
+                    <th>العدة</th>
+                    <th>السعر</th>
+                    <th>التاريخ</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+                <tr>
+                    <td>تفاح</td>
+                    <td>10</td>
+                    <td>صناديق</td>
+                    <td>15</td>
+                    <td></td>
+                    <td><button id="editkind" class="btn" style="color: #00F000;"><i class="fa-regular fa-pen-to-square"></i></button></td>
+                    <td><button id="deletecar" class="btn"  style="color: #FF0000;" ><i class="fa-solid fa-trash"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <!-- تعديل بيانات النقلة -->
     <div class="window" id="editcarcon">
-        <i id="closeeditcon" class="fa-solid fa-xmark"></i>
+        <i id="closeeditcon" class="fa-solid fa-xmark close"></i>
         <h2>تعديل النقلة</h2>
         <div class="inputs">
             <input type="text" name="" id="" placeholder="اسم النقلة">
@@ -67,6 +92,7 @@
                         <th></th>
                         <th></th>
                         <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody id="tablebody">
@@ -76,6 +102,7 @@
                         <td>12/12/2023</td>
                         <td>عمولة</td>
                         <td><button class="type" id="addkind">اصناف النقلة</button></td>
+                        <td><button class="type" id="sellbtn">ترحيل</button></td>
                         <td><button id="editcar" class="btn" style="color: #00F000;"><i class="fa-regular fa-pen-to-square"></i></button></td>
                         <td><button id="deletecar" class="btn"  style="color: #FF0000;" ><i class="fa-solid fa-trash"></i></button></td>
                     </tr>
@@ -85,6 +112,24 @@
     </div>
     <script src="js/search.js"></script>
     <script src="js/buttons.js">
+    </script>
+    <script>
+        let addcon = document.getElementById('addcon')
+        let editcon = document.getElementById('editcon')
+        let editkind = document.getElementById('editkind')
+        editcon.style.display='none'
+        editkind.onclick=()=>{
+            addcon.style.display='none'
+            editcon.style.display='block'
+        }
+        editcon.onclick=()=>{
+            editcon.style.display='none'
+            addcon.style.display='block'
+        }
+        let sellbtn  = document.getElementById('sellbtn')
+        sellbtn.onclick=()=>{
+            window.location.href='sellcar.html'
+        }
     </script>
 </body>
 </html>
