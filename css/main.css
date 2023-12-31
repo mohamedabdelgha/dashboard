@@ -488,9 +488,10 @@ header img{width: 60px;}
         width: 30%;
         font-size: 15px;
     }
+    .title h1{font-size:20px;}
     .table{width: 95%;}
-    .todayscar .table table{width: 100%;transform: scale(0.5);}
-    .table table{width: 100%;transform: scale(0.8);}
+    .todayscar .table table{width: 100%;transform: scale(0.4);}
+    .table table{width: 100%;transform: scale(0.7);}
     .table input{
         width: 80%;
         text-align: center;
