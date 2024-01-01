@@ -170,7 +170,7 @@ header img{width: 60px;}
     flex-direction: column;
     direction: rtl;
 }
-.window .close{
+.window .close,.profitcon .close{
     position: absolute;
     top: 20px;
     left: 20px;
@@ -181,7 +181,7 @@ header img{width: 60px;}
     border-radius: 50%;
     transition: 0.5s ease;
 }
-.window .close:hover{
+.window .close:hover,.profitcon .close:hover{
     color: #c10000;
 }
 .window h2{
@@ -537,6 +537,50 @@ header img{width: 60px;}
     flex-direction: column;
     gap: 30px;
 }
+.paied{
+    background: linear-gradient(180deg,#5A8030,#74C785);
+}
+.table .paied td{
+    font-weight: 600;
+    color: #fff;
+}
+.remain{
+    background: linear-gradient(180deg,#760505,#c10000);
+}
+.table .remain td{
+    font-weight: 600;
+    color: #fff;
+}
+.print{
+    color: #fff;
+    background-color: #00C2F4;
+    border: none;
+    font-size: 25px;
+    width: 50%;
+    border-radius:10px ;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+.print:hover{
+    background-color: rgb(72, 72, 255);
+}
+.profitcon{
+    direction: rtl;
+    width: 90%;
+    position:relative;
+    z-index: 111;
+    background-color: #dedede;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px #625D5D;
+}
+
 /* responsive customization */
 @media (max-width:800px) {
     header img{width: 30px;}

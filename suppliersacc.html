@@ -15,7 +15,17 @@
         </div>
         <a href="home.html"><i class="fa-solid fa-arrow-left"></i></a>
     </header>
-    <div class="addnewcar">
+    <!-- تعديل عميل -->
+    <form class="window" id="editsuppliercon" action="">
+        <i id="closeeditsupplier" class="fa-solid fa-xmark close"></i>
+        <div class="inputs">
+            <input type="text" placeholder="اسم العميل">
+            <input type="text" placeholder="اسم المنطقة">
+            <input type="date" placeholder="المنظقة">
+            <button class="addbtn">تعديل عميل</button>
+        </div>
+    </form>
+    <div class="todayscar">
         <form class="addcar" action="">
             <div>
                 <input type="text" placeholder="اسم العميل">
@@ -55,13 +65,29 @@
                         <td>1500</td>
                         <td>0</td>
                         <td>دمنهور</td>
-                        <td><button class="type" id="">عرض</button></td>
-                        <td><button id="editcar" class="btn" style="color: #00F000;"><i class="fa-regular fa-pen-to-square"></i></button></td>
+                        <td><button class="type" id="show">عرض</button></td>
+                        <td><button id="editsupplier" class="btn" style="color: #00F000;"><i class="fa-regular fa-pen-to-square"></i></button></td>
                         <td><button id="deletecar" class="btn"  style="color: #FF0000;" ><i class="fa-solid fa-trash"></i></button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+    <script src="js/search.js"></script>
+    <script>
+        let show = document.getElementById('show')
+        let editsupplier = document.getElementById('editsupplier')
+        let editsuppliercon = document.getElementById('editsuppliercon')
+        let closeeditsupplier = document.getElementById('closeeditsupplier')
+        show.onclick=()=>{
+            window.location.href='supplierpage.html'
+        }
+        editsupplier.onclick=()=>{
+            editsuppliercon.style.display='flex'
+        }
+        closeeditsupplier.onclick=()=>{
+            editsuppliercon.style.display='none'
+        }
+    </script>
 </body>
 </html>
