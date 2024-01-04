@@ -15,6 +15,9 @@
         </div>
         <a href="home.html"><i class="fa-solid fa-arrow-left"></i></a>
     </header>
+    <div class="window" id="printcon">
+        <i id="closeprintcon" class="fa-solid fa-xmark close"></i>
+    </div>
     <div class="detailscon">
         <h2> اسم العميل: <span>محمد احمد</span></h2>
         <h2>التاريخ : <span>12/10/2022</span></h2>
@@ -87,8 +90,18 @@
     <script src="js/search.js"></script>
     <script>
         let sellcar=document.getElementById('sellcar')
+        let printbtn=document.getElementById('print')
+        let printtb = document.querySelector('.table')
+        let printcon = document.getElementById('printcon')
+        let closeprintcon = document.getElementById('closeprintcon')
         sellcar.onclick=()=>{
             window.location.href='add.html'
+        }
+        printbtn.onclick=()=>{
+            printcon.style.display='flex'
+        }
+        closeprintcon.onclick=()=>{
+            printcon.style.display='none'
         }
     </script>
 </body>

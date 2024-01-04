@@ -15,7 +15,6 @@
         </div>
         <a href="home.html"><i class="fa-solid fa-arrow-left"></i></a>
     </header>
-    <button id="details" class="cardetails">تفاصيل النقلة</button>
         <!-- اضافة اصناف للنقلة -->
     <div class="window" id="kinds">
         <i id="closekinds" class="fa-solid fa-xmark close"></i>
@@ -98,8 +97,9 @@
     <div class="sellcon">
         <input type="number" placeholder="العدد">
         <input type="number" placeholder="الوزن">
-        <input type="number" placeholder="السعر">
         <input type="text" placeholder="اسم البائع">
+        <button>تم</button>
+        <input type="number" placeholder="السعر">
         <select name="" id="">
             <option value="">صناديق صغيرة</option>
             <option value="">صناديق كبيرة</option>
@@ -107,7 +107,6 @@
         <select name="kind" id="">
             <option value="تفاح">تفاح</option>
         </select>
-        <button>تم</button>
     </div>
     <div class="todayscar">
         <div class="title">
@@ -118,7 +117,6 @@
             <table>
                 <thead>
                     <tr>
-                        <th></th>
                         <th>العدد</th>
                         <th>الوزن</th>
                         <th>السعر</th>
@@ -133,7 +131,6 @@
                 </thead>
                 <tbody id="tablebody">
                     <tr>
-                        <td>1</td>
                         <td>10</td>
                         <td>50</td>
                         <td>8</td>
@@ -148,6 +145,7 @@
                 </tbody>
             </table>
         </div>
+        <button id="details" class="cardetails">تفاصيل النقلة</button>
     </div>
     <!-- البحث عن عمليات البيع باستخدام اسم البائع -->
     <script>
